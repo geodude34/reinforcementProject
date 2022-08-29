@@ -40,6 +40,9 @@ module.exports = {
     //   '/api': 'http://localhost:3000'
     // },
     compress: true,
-    port: 8080
+    port: 8080,
+    proxy: {
+      '/addToTeam': 'http://localhost:3000',
+    }
   }
 };
