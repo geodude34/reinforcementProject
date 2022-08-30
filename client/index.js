@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-//import './index.css' Note: need to import styles when ready
-import App from './App'
-import { store } from './app/store'
+import App from './App.jsx'
+import { store } from './store'
 import { Provider } from 'react-redux'
+import './styles.scss'
 
 ReactDOM.render(
   <Provider store={store}>
