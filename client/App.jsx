@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './header.jsx';
-
+import UserTeam from './UserTeam';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-          <Header />
+        <Header />
 
-          {/* <div className='content'>
+        {/* <div className='content'>
             <Routes>
               <Route path='/login' element={<Login />} />
               <Route path='/' element={<MainContainer/>} />
@@ -17,9 +17,6 @@ const App = () => {
               <Route path='/team' element={<Team />} />
             </Routes>
           </div> */}
-
-          
-    
       </BrowserRouter>
     </div>
   );
