@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import SearchContainer from './containers/SearchContainer.jsx';
 import Header from './header.jsx';
 import UserTeam from './UserTeam.jsx';
 
@@ -17,6 +18,7 @@ const App = () => {
             <Route exact path='/team' element={<UserTeam />} />
           </Routes>
         </div> */}
+        <SearchContainer />
       </BrowserRouter>
     </div>
   );

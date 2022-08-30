@@ -13,15 +13,19 @@ class SearchContainer extends Component {
   render() {
   return(
     <div className="container">
-        <div className="outerBox">
-          <div><Picture /></div>
-          <div><Stats /></div>
-          <div><Description /></div>
-          <div><UserInputForm /></div>
+      <div className='flex-container1'>
+        <div className='picAndButton'>
+          <Picture />
           <button onClick={() => console.log('clicked')}>Add to team</button>
-          <div><UserInputForm /></div>
         </div>
+        <Stats />
       </div>
+      <div className='description'><Description /></div>
+      <div className='flex-container2'>
+        <UserInputForm />
+        <UserInputForm />
+      </div>
+    </div>
     );
   }
 
