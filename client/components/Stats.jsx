@@ -1,14 +1,14 @@
-import React from 'react';
-import Box from '@material-ui/core/Box';
-  
+import React from 'react';  
 const Stats = () => {
   
   return (
-    <div style={{ marginLeft: '40%', marginTop: '60px', width: '30%' }}>
-    <Box color="white" bgcolor="blue" p={1}>
-      Greetings from GeeksforGeeks!
-      This is a test 
-    </Box>
+    <div>
+      <h2>Hp</h2>
+      <h2>Att</h2>
+      <h2>Def</h2>
+      <h2>Sp. Att</h2>
+      <h2>Sp. Def</h2>
+      <h2>Speed</h2>
     </div>
   );
 }

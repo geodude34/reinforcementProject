@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import SearchContainer from './containers/SearchContainer.jsx';
 import Header from './header.jsx';
-import UserTeam from './UserTeam';
+//import UserTeam from './UserTeam';
 
 const App = () => {
   return (
@@ -9,14 +10,15 @@ const App = () => {
       <BrowserRouter>
         <Header />
 
-        {/* <div className='content'>
-            <Routes>
+        <div className='content'>
+            {/* <Routes>
               <Route path='/login' element={<Login />} />
               <Route path='/' element={<MainContainer/>} />
               <Route path='/compare' element={<Compare />} />
               <Route path='/team' element={<Team />} />
-            </Routes>
-          </div> */}
+            </Routes> */}
+            <SearchContainer />
+          </div>
       </BrowserRouter>
     </div>
   );
