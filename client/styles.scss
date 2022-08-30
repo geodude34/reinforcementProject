@@ -42,5 +42,31 @@ $bg: black;
     margin-right: 15px;
 }
   
+.picture-display {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 
+
+}
+
+.stats-display {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.type-compare { display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.compare-form { display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+}
+  
   
