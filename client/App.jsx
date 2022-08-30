@@ -1,27 +1,23 @@
 import React from 'react';
-import { Routes, Route, HashRouter } from 'react-router-dom';
-//import Header from './components/Header.jsx';
-
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Header from './header.jsx';
+import UserTeam from './UserTeam';
 
 const App = () => {
   return (
     <div>
-      <HashRouter>
-        <div className='wrapper-container'>
-          <Header />
+      <BrowserRouter>
+        <Header />
 
-          <div className='content'>
+        {/* <div className='content'>
             <Routes>
-              <Route path='/login' element={<ProductContainer />} />
-              <Route path='/search' element={<TeamContainer />} />
-              <Route path='/compare' element={<Terms />} />
-              <Route path='/team' element={<Privacy />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/' element={<MainContainer/>} />
+              <Route path='/compare' element={<Compare />} />
+              <Route path='/team' element={<Team />} />
             </Routes>
-          </div>
-
-          <Footer />
-        </div>
-      </HashRouter>
+          </div> */}
+      </BrowserRouter>
     </div>
   );
 };
