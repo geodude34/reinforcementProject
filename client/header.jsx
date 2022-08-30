@@ -6,7 +6,7 @@ const Header = () => {
 const navigate = useNavigate();
 
 const home = () => {
-    navigate('/');
+    navigate('/home');
 }
 
 const team = () => {
@@ -14,7 +14,7 @@ const team = () => {
 }
 
 const logout = () => {
-    navigate('/login')
+    navigate('/')
 }
 
 return (
