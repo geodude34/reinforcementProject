@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-export default UserTeam = () => {
+const UserTeam = () => {
   const [pokemonTeam, setPokemonTeam] = useState([]);
 
   useEffect(() => {
     const getTeamData = async (id) => {};
   }, []);
 };
+
+export default UserTeam;
