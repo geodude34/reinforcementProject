@@ -1,13 +1,18 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './header.jsx';
-import UserTeam from './UserTeam';
+import SearchContainer from './containers/SearchContainer.jsx';
+import CompareContainer from './containers/CompareContainer.jsx';
+import UserTeam from './components/UserTeam.jsx';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <Header />
+        <SearchContainer />
+        <CompareContainer />
+        
 
         {/* <div className='content'>
             <Routes>
