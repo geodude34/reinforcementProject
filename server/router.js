@@ -18,8 +18,8 @@ router.post('/addToTeam', controller.addPokemon, (req, res) => {
   return res.status(200).json(res.locals.addedPokemon);
 });
 //route delete Pokemon data from teams db
-router.delete('/removeFromTeam', controller.removePokemon, (req, res) => {
-  res.sendStatus(200);
+router.delete('/removeFromTeam', controller.removePokemon, controller.getPokemon, (req, res) => {
+  return res.status(200).json(res.locals.Pokemons);
 });
 
 //route to retrieve all Pokemon data from a specific userID in teams db

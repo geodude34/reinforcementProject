@@ -11,7 +11,8 @@ const controller = {};
 
 controller.addPokemon = async (req, res, next) => {
   try {
-    const { name, userId } = req.body
+    const { name } = req.body
+    const {userId} = req.cookies
     const query = `INSERT into teams (userId, pokemon) VALUES (${userId}, '${name}') RETURNING *`;
     const result = await db.query(query);
     res.locals.addedPokemon = result.rows[0];
@@ -30,7 +31,8 @@ controller.addPokemon = async (req, res, next) => {
 
 controller.removePokemon = async ( req, res, next ) => {
   try{
-    const { name, userId } = req.body;
+    const { name } = req.body;
+    const {userId} = req.cookies;
     const query = `DELETE from teams WHERE userId = ${userId} AND pokemon = '${name}'`;
     await db.query(query);
     return next();
@@ -47,7 +49,7 @@ controller.removePokemon = async ( req, res, next ) => {
 
 controller.getPokemon = async( req, res, next ) => {
   try{
-    const { userId } = req.params;
+    const { userId } = req.cookies;
     const query = `SELECT pokemon from teams WHERE userId = ${userId}`;
     const result = await db.query(query);
     res.locals.Pokemons = result.rows;
