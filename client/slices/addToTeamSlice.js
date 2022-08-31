@@ -19,11 +19,9 @@ export const addToTeamSlice = createSlice({
   initialState,
   reducers: {
     addToTeam: (state, action) => {
-      // updating state with searched pokemon
       for (const key in state) {
         state[key] = action.payload[key];
       }
-      console.log(action.payload);
       try {
         axios.post('http://localhost:3000/addToTeam', action.payload);
         console.log('Added to team');
