@@ -24,52 +24,6 @@ h1 {
 }
 
 .header-component button {
-    border-radius: 5px;
-    padding: 0.8em 1.8em;
-    border: 2px solid #252cb0;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 80px;
-    transition: 0.3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #252cb0;
-    justify-items: flex-end;
-    min-width: 100px;
-    margin-right: 15px;
-}
-  
-.picture-display {
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-
-
-}
-
-.stats-display {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-
-}
-
-.type-compare { display: flex;
-  align-content: center;
-  justify-content: space-between;
-
-}
-
-.compare-form { display: flex;
-  align-content: center;
-  justify-content: space-between;
-
-}
-  
-  
   border-radius: 5px;
   padding: 0.8em 1.8em;
   border: 2px solid #252cb0;
