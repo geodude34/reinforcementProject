@@ -34,7 +34,6 @@ const SearchContainer = (props) =>{
   
   const dispatch = useDispatch();
 
-
   return(
     <div className="container">
       <div className='flex-container1'>

@@ -6,7 +6,7 @@ const Task = props => {
   if(pokemonOne){
     return (
       <div className='pictureDiv'>
-        <img className={`${pokemonOne.type1} profilPic`} src={pokemonOne.image} alt={pokemonOne.name}></img>
+        <img className={`${pokemonOne.type1}`} id='profilePic' src={pokemonOne.image} alt={pokemonOne.name}></img>
    
       </div>
     );
