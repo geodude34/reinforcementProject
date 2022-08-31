@@ -1,10 +1,11 @@
 import React from 'react';
+import testImg from '../assets/geodude.png';
 
 const Task = props => {
   
   return (
-    <div>
-      <img class='profilePic' src="https://archives.bulbagarden.net/media/upload/9/98/074Geodude.png" alt="Geodude"></img>
+    <div className='pictureDiv'>
+      <img className='profilePic' src={testImg} alt="Geodude"></img>
     </div>
   );
 };

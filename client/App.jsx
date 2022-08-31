@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Header />
-        <UserTeam />
+        {/* <UserTeam /> */}
         {/* <div className='content'>
           <Routes>
             <Route exact path='/login' element={<Login />} />
@@ -18,7 +18,7 @@ const App = () => {
             <Route exact path='/team' element={<UserTeam />} />
           </Routes>
         </div> */}
-        <SearchContainer />
+        <div className='main'><SearchContainer /></div>
       </BrowserRouter>
     </div>
   );

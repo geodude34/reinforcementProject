@@ -3,7 +3,14 @@ const app = express();
 const path = require('path');
 const router = require('./router');
 const PORT = process.env.PORT || 3000;
+const cors = require('cors');
+const cookieParser = require('cookie-parser')
 
+app.use(
+  cors({
+    origin: 'http://localhost:8080',
+  })
+);
 // connecting to the database
 app.use(cookieParser());
 // automatically parse urlencoded body content and form data from incoming requests and place it in req.body
