@@ -5,12 +5,7 @@ import UserInputForm from '../components/UserInputForm.jsx'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class SearchContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const SearchContainer = () => {
   return(
     <div className="container">
       <div className='flex-container1'>
@@ -26,9 +21,9 @@ class SearchContainer extends Component {
         <UserInputForm />
       </div>
     </div>
-    );
-  }
-
+  );
 }
+
+
 
 export default SearchContainer;
