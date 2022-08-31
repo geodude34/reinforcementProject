@@ -4,7 +4,8 @@ const path = require('path');
 const router = require('./router');
 const PORT = process.env.PORT || 3000;
 const cors = require('cors');
-const cookieParser = require('cookie-parser')
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
 
 app.use(
   cors({
@@ -16,6 +17,13 @@ app.use(cookieParser());
 // automatically parse urlencoded body content and form data from incoming requests and place it in req.body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(
+  cors({
+    origin: 'http://localhost:8080',
+  })
+);
 
 if (process.env.NODE_ENV === 'production')
   app.use(express.static(path.resolve(__dirname, '../dist')));

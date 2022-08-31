@@ -6,7 +6,7 @@ module.exports = {
   entry: './client/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -16,13 +16,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg)$/,
@@ -30,12 +30,14 @@ module.exports = {
           loader: 'url-loader',
         },
       },
-    ]
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'Development',
-    template: './client/index.html'
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Development',
+      template: './client/index.html',
+    }),
+  ],
   devServer: {
     static: {
       publicPath: '/dist', // Give any actual path of our deployment server or CDN and simulate it during local development
@@ -49,6 +51,12 @@ module.exports = {
     port: 8080,
     proxy: {
       '/addToTeam': 'http://localhost:3000',
-    }
-  }
+      '/addToTeam': 'http://localhost:3000',
+      '/removeFromTeam': 'http://localhost:3000',
+      '/getTeam': 'http://localhost:3000',
+      '/auth/google': 'http://localhost:3000',
+      '/google/callback': 'http://localhost:3000',
+      '/': 'http://localhost:3000',
+    },
+  },
 };

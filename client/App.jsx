@@ -1,10 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import SearchContainer from './containers/SearchContainer.jsx';
 import Header from './header.jsx';
 import UserTeam from './UserTeam.jsx';
 
 const App = () => {
+  const [pokemonOne, setPokemonOne] = useState();
   return (
     <div>
       <BrowserRouter>
@@ -18,7 +19,7 @@ const App = () => {
             <Route exact path='/team' element={<UserTeam />} />
           </Routes>
         </div> */}
-        <div className='main'><SearchContainer /></div>
+        <SearchContainer pokemonOne={pokemonOne} setPokemonOne={setPokemonOne} />
       </BrowserRouter>
     </div>
   );
