@@ -6,7 +6,7 @@ const Header = () => {
 const navigate = useNavigate();
 
 const home = () => {
-    navigate('/');
+    navigate('/home');
 }
 
 const team = () => {
@@ -14,12 +14,12 @@ const team = () => {
 }
 
 const logout = () => {
-    navigate('/login')
+    navigate('/')
 }
 
 return (
   <div className='header-container'>
-    <h1>Encylopokeia</h1>
+    <h1>EncyloPOKEIA</h1>
     <button className="header-component" onClick={home}>Home</button>
     <button className="header-component" onClick={team}>Team</button>
     <button className="header-component" onClick={logout}>Logout</button>

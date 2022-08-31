@@ -3,6 +3,8 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import SearchContainer from './containers/SearchContainer.jsx';
 import Header from './header.jsx';
 import UserTeam from './UserTeam.jsx';
+import Login from './Login.jsx';
+
 
 const App = () => {
   const [pokemonOne, setPokemonOne] = useState();
@@ -11,21 +13,19 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Header />
-        {/* <UserTeam /> */}
-        {/* <div className='content'>
+       
+        <div className='content'>
           <Routes>
-            <Route exact path='/login' element={<Login />} />
-            <Route exact path='/' element={<MainContainer />} />
-            <Route exact path='/compare' element={<Compare />} />
+            <Route exact path='/' element={<Login />} />
+            <Route exact path='/home' element={<SearchContainer 
+              pokemonOne={pokemonOne}
+              setPokemonOne={setPokemonOne}
+              pokemonOneDesc={pokemonOneDesc}
+              setpokemonOneDesc={setpokemonOneDesc}
+            />} />
             <Route exact path='/team' element={<UserTeam />} />
           </Routes>
-        </div> */}
-        <SearchContainer 
-          pokemonOne={pokemonOne}
-          setPokemonOne={setPokemonOne}
-          pokemonOneDesc={pokemonOneDesc}
-          setpokemonOneDesc={setpokemonOneDesc}
-          />
+        </div>
       </BrowserRouter>
     </div>
   );

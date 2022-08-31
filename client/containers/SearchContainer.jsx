@@ -3,8 +3,7 @@ import Picture from '../components/Picture.jsx'
 import Stats from '../components/Stats.jsx'
 import UserInputForm from '../components/UserInputForm.jsx'
 import React, {useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { addToTeam } from '../slices/addToTeamSlice.js'
+import axios from 'axios';
 
 const SearchContainer = (props) =>{
   const { pokemonOneDesc, setpokemonOneDesc, pokemonOne, setPokemonOne } = props;
@@ -24,22 +23,25 @@ const SearchContainer = (props) =>{
   useEffect(() => {
     console.log(pokemonOneDesc);
     console.log(pokemonOne);
-    if(pokemonOneDesc) {
-      for (const key in pokemonOne) {
-        dummyPokemon[key] = pokemonOne[key];
-      }
-    }
     console.log(dummyPokemon);
   }, [pokemonOneDesc]);
-  
-  const dispatch = useDispatch();
+
+  const addPokemonToTeam = async (pokemonObj) => {
+    console.log('Within addPokemonToTeam')
+    try {
+        const result = await axios.post('http://localhost:3000/addToTeam', pokemonObj );
+        console.log(result.data);
+      } catch (err) {
+        console.log(err);
+      }
+  }
 
   return(
     <div className="container">
       <div className='flex-container1'>
         <div className='picAndButton'>
           <Picture pokemonOne={pokemonOne}/>
-          <button onClick={() => dispatch(addToTeam(dummyPokemon))}>Add to team</button>
+          <button onClick={() => {addPokemonToTeam(pokemonOne)}}>Add to team</button>
         </div>
         <Stats pokemonOne={pokemonOne}/>
       </div>

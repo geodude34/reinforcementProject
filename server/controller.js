@@ -25,7 +25,7 @@ controller.addPokemon = async (req, res, next) => {
     } = req.body
     
     // const {userId} = req.cookies
-    const query = `INSERT into teams (userId, name, image, type1, type2, hp, attack, speed, defense, spattack, spdefense) VALUES (2, '${name}', '${image}', '${type1}', '${type2}', ${hp}, ${attack}, ${speed}, ${defense}, ${spattack}, ${spdefense}) RETURNING *`;
+    const query = `INSERT into teams (userId, pokemon, image, type1, type2, hp, attack, speed, defense, spattack, spdefense) VALUES (2, '${name}', '${image}', '${type1}', '${type2}', ${hp}, ${attack}, ${speed}, ${defense}, ${spattack}, ${spdefense}) RETURNING *`;
     const result = await db.query(query);
     res.locals.addedPokemon = result.rows[0];
     return next();
