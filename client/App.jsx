@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import SearchContainer from './containers/SearchContainer.jsx';
 import Header from './header.jsx';
@@ -7,6 +7,7 @@ import CompareContainer from './containers/CompareContainer.jsx';
 import UserTeam from './components/UserTeam.jsx';
 
 const App = () => {
+  const [pokemonOne, setPokemonOne] = useState();
   return (
     <div>
       <BrowserRouter>
@@ -24,7 +25,7 @@ const App = () => {
             <Route exact path='/team' element={<UserTeam />} />
           </Routes>
         </div> */}
-        <SearchContainer />
+        <SearchContainer pokemonOne={pokemonOne} setPokemonOne={setPokemonOne} />
       </BrowserRouter>
     </div>
   );
