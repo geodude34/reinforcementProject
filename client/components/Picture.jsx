@@ -1,12 +1,21 @@
 import React from 'react';
+import testImg from '../assets/geodude.png';
 
 const Task = props => {
-  
-  return (
-    <div>
-      <img class='profilePic' src="https://archives.bulbagarden.net/media/upload/9/98/074Geodude.png" alt="Geodude"></img>
-    </div>
-  );
+  const { pokemonOne } = props;
+  if(pokemonOne){
+    return (
+      <div className='pictureDiv'>
+        <img className={`${pokemonOne.type1}`} id='profilePic' src={pokemonOne.image} alt={pokemonOne.name}></img>
+   
+      </div>
+    );
+  }
+  else return(
+    <div className='pictureDiv'>
+        <img className='profilePic' src={testImg} alt='test'></img>
+      </div>
+  )
 };
 
 export default Task;

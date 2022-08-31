@@ -57,7 +57,7 @@ router.get(
   passport.authenticate('google'),
   controller.setCookie,
   (req, res) => {
-    return res.redirect('http://localhost:8080/');
+    return res.redirect('/home');
   }
 );
 //route saving Pokemon data in teams db
