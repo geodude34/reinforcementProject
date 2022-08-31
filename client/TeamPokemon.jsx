@@ -28,7 +28,7 @@ const TeamPokemon = ({ pokemonTeam, setPokemonteam }) => {
               src={pokemon.image}
             />
             {pokemon.pokemon}
-            <button onclick={() => handleRemoveClick()} id='removeFromTeam' name={pokemon.pokemon}>Remove</button>
+            <button onClick={() => handleRemoveClick()} id='removeFromTeam' name={pokemon.pokemon}>Remove</button>
           </td>
           <td>
             <span className={`${pokemon.type1} type`}>{pokemon.type1}</span>
