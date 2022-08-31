@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-import axios from 'axios';
 
 const UserInputForm = props => {
 
   const [pokemonOne, setPokemonOne] = useState();
+  const [pokemonTwo, setPokemonTwo] = useState();
 
   const onSubmit = async () => {
     try{
@@ -35,8 +35,6 @@ const UserInputForm = props => {
     }
 
   }
-
-  const userInput = input => console.log(input);
 
   return(
   <div className="displayBox">

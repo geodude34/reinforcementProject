@@ -1,6 +1,6 @@
 import { ContactsTwoTone } from '@mui/icons-material';
 import React, { useState, useEffect } from 'react';
-import TeamPokemon from './TeamPokemon.jsx';
+import TeamPokemon from './TeamPokemon.jsx'
 
 const UserTeam = () => {
   // const [pokemonTeam, setPokemonTeam] = useState([]);

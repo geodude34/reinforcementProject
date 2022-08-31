@@ -2,8 +2,10 @@ import Description from '../components/Description.jsx';
 import Picture from '../components/Picture.jsx'
 import Stats from '../components/Stats.jsx'
 import UserInputForm from '../components/UserInputForm.jsx'
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { useState } from 'react';
+import axios from 'axios';
+
+c
 
 const SearchContainer = () => {
   return(
@@ -17,6 +19,7 @@ const SearchContainer = () => {
       </div>
       <div className='description'><Description /></div>
       <div className='flex-container2'>
+        <span></span>
         <UserInputForm />
         <UserInputForm />
       </div>
