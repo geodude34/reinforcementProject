@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=production ts-node server/server.ts",
+    "start": "cross-env NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve\" \"cross-env NODE_ENV=development nodemon server/server.js\""
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve\" \"cross-env NODE_ENV=development nodemon server/server.js\"",
+    "kill": "npx kill-port 3000 8080"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
     "@mui/material": "^5.10.3",
     "@reduxjs/toolkit": "^1.8.3",
     "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "gapi-script": "^1.2.0",
     "js-cookie": "^3.0.1",

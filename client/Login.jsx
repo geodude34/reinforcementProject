@@ -1,30 +1,25 @@
-import React from 'react';
-import { GoogleLogin } from 'react-google-login';
+import React, { useEffect } from 'react';
+import GoogleIcon from '@mui/icons-material/Google';
+import Button from '@mui/material/Button';
 
-const clientId = "383042639792-sr4e1d41vs3f02poclsdc097ao16b5sg.apps.googleusercontent.com";
-
-   const onSuccess = (res) => {
-    console.log("Login success! Current user: ", res.profileObj);
-   }
-
-   const onFailure = (res) => {
-    console.log("Login failed! res: ", res);
-   }
-
-const Login = () => {
+export default function Login() {
   return (
-    <div id="signInButton">
-        <GoogleLogin
-            clientID={clientId}
-            buttonText="Login"
-            onSuccess={onSuccess}
-            onFailure={onFailure}
-            cookiePolicy={'single_host_origin'}
-            isSignedIn={true}
-            />       
-    </div>
-
-  )
+    <a
+      href='http://localhost:3000/auth/google'
+      style={{ textDecoration: 'none' }}
+    >
+      <Button id='login' variant='contained' size='large'>
+        <GoogleIcon />
+        <span
+          style={{
+            fontFamily: 'Open Sans, sans-serif',
+            marginLeft: '13px',
+            fontSize: '11px',
+          }}
+        >
+          Sign in with Google
+        </span>
+      </Button>
+    </a>
+  );
 }
-
-export default Login;
