@@ -2,14 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 
 const compareForm = () => {
-  <form>
-    <label htmlFor='text'>Compare</label>
-    <input type='text' id='Input_Text' onChange={(e) => (e.target.value)}/>
-    <input type='button' onClick={() =>{
-      console.log(props);
-      props.addMarket(props.newLocation);
-      props.setNewLocation('');}} value='Add New Market' id='marketBox'/>
-  </form>
+  return(
+    <div className="displayBox">
+      <input placeholder='Enter pokemon to compare here...' type="text" id="userInput"/>
+      <button onClick={() => onSubmit()}>Search</button>
+      </div>
+    );
 };
 
 export default compareForm;

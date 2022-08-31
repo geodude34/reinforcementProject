@@ -14,7 +14,7 @@ const UserInputForm = props => {
       console.log('results', results)
       if(results) {
         results = results.data
-        const pokemonOneStats = {
+        const pokemonStats = {
           name: pokemonName,
           hp: results.stats[0].base_stat, 
           attack: results.stats[1].base_stat,
@@ -27,7 +27,6 @@ const UserInputForm = props => {
           image: results.sprites.front_default  
         }
         console.log(pokemonOneStats)
-        setPokemonOne(pokemonOneStats)
       }
       
     } catch(err){

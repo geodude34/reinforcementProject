@@ -5,7 +5,7 @@ import UserInputForm from '../components/UserInputForm.jsx'
 import { useState } from 'react';
 import axios from 'axios';
 
-c
+
 
 const SearchContainer = () => {
   return(

@@ -8,6 +8,7 @@ import Login from './Login.jsx';
 
 const App = () => {
   const [pokemonOne, setPokemonOne] = useState();
+  const [pokemonTwo, setPokemonTwo] = useState();
   return (
     // <div>
     //   <BrowserRouter>
@@ -21,7 +22,7 @@ const App = () => {
     <>
         <div> 
         {/* <SearchContainer pokemonOne={pokemonOne} setPokemonOne={setPokemonOne} /> */}
-        <CompareContainer pokemonOne={pokemonOne} />
+        <CompareContainer pokemonTwo={pokemonTwo} setPokemonTwo={setPokemonTwo}/>
         <UserTeam />
     </div>
     </>
